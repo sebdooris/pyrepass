@@ -25,7 +25,6 @@ def repass(password):
         'upper': upper,
         'numeric': numeric,
         'special': special,
-        'password': password,
         'space': space,
     }
 # Read csv
