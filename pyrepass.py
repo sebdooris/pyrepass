@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-def password_check(password):
+def repass(password):
     length = len(password)
     lower = 0
     upper = 0
@@ -31,5 +31,5 @@ def password_check(password):
 # Read csv
 data = pd.read_csv("accounts.csv")
 for password in data['Password']:
-    result = password_check(password)
+    result = repass(password)
     print(result)
