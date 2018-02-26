@@ -29,6 +29,17 @@ def repass(password):
     }
 # Read csv
 data = pd.read_csv("accounts.csv")
+df = pd.DataFrame(columns=['length', 'lower', 'upper', 'numeric', 'special', 'space'])
+i = 0
 for password in data['Password']:
     result = repass(password)
-    print(result)
+    df.loc[i] = result
+    i += 1
+print(df)
+print('Average Length:\t' + str(df["length"].mean().round(2)))
+print('Average Lower:\t' + str(df["lower"].mean().round(2)))
+print('Average Upper:\t' + str(df["upper"].mean().round(2)))
+print('Average Numeric:' + str(df["numeric"].mean().round(2)))
+print('Average Special:' + str(df["special"].mean().round(2)))
+print('Average Space:\t' + str(df["space"].mean().round(2)))
+
