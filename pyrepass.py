@@ -43,10 +43,10 @@ print('Average Upper:\t' + str(df['upper'].mean().round(2)))
 print('Average Numeric:' + str(df['numeric'].mean().round(2)))
 print('Average Special:' + str(df['special'].mean().round(2)))
 print('Average Space:\t' + str(df['space'].mean().round(2)) + '\n')
-print(df['length'].describe())
+"""print(df['length'].describe())
 print(df['lower'].describe())
 print(df['upper'].describe())
 print(df['numeric'].describe())
 print(df['special'].describe())
 print(str(df['space'].describe()) + "\n")
-
+"""
